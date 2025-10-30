@@ -184,7 +184,7 @@ export const EducationSection: React.FC = () => {
         <SubsectionTitle>Базовое образование</SubsectionTitle>
         <List>
           <ListItem>МГУ им. Ломоносова - Психологическое консультирование и психодиагностика личности</ListItem>
-          <ListItem>МГУ им. Косыгина - Социология</ListItem>
+          <ListItem>РГУ им. Косыгина - Социология</ListItem>
         </List>
 
         <SubsectionTitle>Повышение квалификации</SubsectionTitle>

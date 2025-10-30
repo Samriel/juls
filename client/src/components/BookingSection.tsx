@@ -251,11 +251,52 @@ export const BookingSection: React.FC = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendTelegramNotification = async (data: FormData) => {
+    const TELEGRAM_BOT_TOKEN = '8241584499:AAGkXZz5B8QOPfkC98VdxDuHM5DKo322CUw';
+    const TELEGRAM_CHAT_ID = '492668222';
+    
+    const message = `
+🔔 *Новая заявка на консультацию!*
+
+👤 *Имя:* ${data.name}
+📍 *Формат:* ${data.format === 'online' ? 'Онлайн' : 'Очно'}
+📅 *Дата и время:* ${data.date ? data.date.toLocaleString('ru-RU') : 'Не указано'}
+📧 *Email:* ${data.email}
+📱 *Телефон:* ${data.phone || 'Не указан'}
+💬 *Комментарий:* ${data.comment || 'Нет комментария'}
+    `.trim();
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown',
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        console.error('Failed to send Telegram notification');
+      }
+    } catch (error) {
+      console.error('Error sending Telegram notification:', error);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the data to your backend
     console.log('Form submitted:', formData);
+    
+    // Send Telegram notification
+    await sendTelegramNotification(formData);
     
     setSubmitted(true);
     
