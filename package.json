@@ -1,0 +1,33 @@
+{
+  "name": "premium-psychologist-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium psychologist SPA (React, minimalist, premium design)",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-datepicker": "^4.16.0",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
