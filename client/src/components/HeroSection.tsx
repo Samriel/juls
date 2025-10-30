@@ -114,7 +114,7 @@ export const HeroSection: React.FC = () => {
         
         <ImageContainer>
           <HeroImage
-            src="/IMG_3622.PNG"
+            src={`${process.env.PUBLIC_URL}/IMG_3622.PNG`}
             alt="Therapy session"
           />
         </ImageContainer>
