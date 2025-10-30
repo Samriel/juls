@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/juls/static/css/main.617bcd97.css",
+    "main.js": "/juls/static/js/main.d835a72a.js",
+    "service-worker.js": "/juls/service-worker.js",
+    "index.html": "/juls/index.html",
+    "main.617bcd97.css.map": "/juls/static/css/main.617bcd97.css.map",
+    "main.d835a72a.js.map": "/juls/static/js/main.d835a72a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.617bcd97.css",
+    "static/js/main.d835a72a.js"
+  ]
+}
