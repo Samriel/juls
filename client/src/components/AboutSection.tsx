@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const AboutContainer = styled.section`
-  background-color: ${theme.colors.graphite};
+  background-color: ${theme.colors.white};
 `;
 
 const AboutContent = styled.div`
@@ -12,14 +12,14 @@ const AboutContent = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   text-align: center;
 `;
 
 const IntroText = styled.p`
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   text-align: center;
   margin-bottom: ${theme.spacing.lg};
   font-weight: 600;
@@ -30,7 +30,7 @@ const ContentBlock = styled.div`
 `;
 
 const Paragraph = styled.p`
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.sm};
   text-align: justify;
 `;
@@ -42,14 +42,14 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.sm};
   padding-left: ${theme.spacing.md};
   position: relative;
 
   &:before {
     content: '•';
-    color: ${theme.colors.champagne};
+    color: ${theme.colors.black};
     font-size: 1.5rem;
     position: absolute;
     left: 0;
@@ -58,7 +58,7 @@ const ListItem = styled.li`
 `;
 
 const Highlight = styled.span`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   font-weight: 600;
 `;
 

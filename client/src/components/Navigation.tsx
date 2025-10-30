@@ -10,10 +10,10 @@ const Nav = styled.nav<{ $isScrolled: boolean }>`
   right: 0;
   z-index: 1000;
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background-color: ${props => props.$isScrolled ? 'rgba(24, 24, 24, 0.95)' : 'transparent'};
+  background-color: ${props => props.$isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent'};
   backdrop-filter: ${props => props.$isScrolled ? 'blur(10px)' : 'none'};
   transition: all 0.3s ease;
-  border-bottom: ${props => props.$isScrolled ? `1px solid ${theme.colors.silver}` : 'none'};
+  border-bottom: ${props => props.$isScrolled ? `1px solid ${theme.colors.graphite}` : 'none'};
 
   @media (max-width: ${theme.breakpoints.mobile}) {
     padding: ${theme.spacing.sm};
@@ -32,7 +32,7 @@ const Logo = styled.div`
   font-family: ${theme.fonts.heading};
   font-size: 1.5rem;
   letter-spacing: 0.1em;
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
 `;
 
 const NavLinks = styled.div<{ $isOpen: boolean }>`
@@ -46,25 +46,27 @@ const NavLinks = styled.div<{ $isOpen: boolean }>`
     right: ${props => props.$isOpen ? '0' : '-100%'};
     height: 100vh;
     width: 70%;
-    background-color: ${theme.colors.graphite};
+    background-color: ${theme.colors.white};
     flex-direction: column;
     justify-content: center;
     transition: right 0.3s ease;
     padding: ${theme.spacing.lg};
+    border-left: 1px solid ${theme.colors.graphite};
   }
 `;
 
 const NavLink = styled(Link)`
   font-family: ${theme.fonts.body};
   font-size: 1rem;
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   cursor: pointer;
   padding: ${theme.spacing.xs} ${theme.spacing.sm};
-  transition: color 0.3s ease;
+  transition: color 0.1s ease;
 
   &:hover,
   &.active {
-    color: ${theme.colors.champagne};
+    color: ${theme.colors.black};
+    font-weight: 600;
   }
 
   @media (max-width: ${theme.breakpoints.mobile}) {
@@ -88,8 +90,8 @@ const Hamburger = styled.button<{ $isOpen: boolean }>`
   span {
     width: 25px;
     height: 2px;
-    background-color: ${theme.colors.white};
-    transition: all 0.3s ease;
+    background-color: ${theme.colors.graphite};
+    transition: all 0.1s ease;
 
     &:nth-child(1) {
       transform: ${props => props.$isOpen ? 'rotate(45deg) translate(7px, 7px)' : 'none'};
@@ -136,7 +138,6 @@ export const Navigation: React.FC = () => {
             to="hero"
             spy={true}
             smooth={true}
-            offset={-70}
             duration={500}
             onClick={closeMenu}
           >
@@ -146,7 +147,7 @@ export const Navigation: React.FC = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-70}
+            
             duration={500}
             onClick={closeMenu}
           >
@@ -156,7 +157,7 @@ export const Navigation: React.FC = () => {
             to="directions"
             spy={true}
             smooth={true}
-            offset={-70}
+            
             duration={500}
             onClick={closeMenu}
           >
@@ -166,7 +167,7 @@ export const Navigation: React.FC = () => {
             to="booking"
             spy={true}
             smooth={true}
-            offset={-70}
+            
             duration={500}
             onClick={closeMenu}
           >
@@ -176,7 +177,7 @@ export const Navigation: React.FC = () => {
             to="education"
             spy={true}
             smooth={true}
-            offset={-70}
+            
             duration={500}
             onClick={closeMenu}
           >

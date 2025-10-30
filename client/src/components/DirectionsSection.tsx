@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const DirectionsContainer = styled.section`
-  background-color: ${theme.colors.black};
+  background-color: ${theme.colors.champagne};
 `;
 
 const DirectionsContent = styled.div`
@@ -12,7 +12,7 @@ const DirectionsContent = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   text-align: center;
 `;
@@ -25,38 +25,39 @@ const DirectionsList = styled.div`
 `;
 
 const DirectionCard = styled.div`
-  background-color: ${theme.colors.graphite};
+  background-color: ${theme.colors.white};
   padding: ${theme.spacing.md};
   border-radius: 8px;
-  border: 1px solid ${theme.colors.silver};
+  border: 1px solid ${theme.colors.graphite};
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    border-color: ${theme.colors.champagne};
-    box-shadow: 0 10px 30px rgba(247, 231, 206, 0.1);
+    border-color: ${theme.colors.black};
+    box-shadow: 0 10px 30px rgba(24, 24, 24, 0.15);
   }
 `;
 
 const DirectionTitle = styled.h3`
   font-family: ${theme.fonts.subheading};
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   margin-bottom: ${theme.spacing.sm};
   font-size: 1.25rem;
   text-transform: none;
 `;
 
 const DirectionText = styled.p`
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   line-height: 1.6;
 `;
 
 const ClosingText = styled.p`
   text-align: center;
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   font-size: 1.125rem;
   margin-top: ${theme.spacing.lg};
   font-style: italic;
+  opacity: 0.8;
 `;
 
 const directions = [

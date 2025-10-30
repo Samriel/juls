@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const EducationContainer = styled.section`
-  background-color: ${theme.colors.black};
+  background-color: ${theme.colors.champagne};
 `;
 
 const EducationContent = styled.div`
@@ -12,14 +12,14 @@ const EducationContent = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   text-align: center;
 `;
 
 const SubsectionTitle = styled.h3`
   font-family: ${theme.fonts.subheading};
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   margin: ${theme.spacing.lg} 0 ${theme.spacing.md};
   font-size: 1.75rem;
   text-transform: none;
@@ -31,14 +31,14 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.sm};
   padding-left: ${theme.spacing.md};
   position: relative;
 
   &:before {
     content: '•';
-    color: ${theme.colors.champagne};
+    color: ${theme.colors.black};
     font-size: 1.5rem;
     position: absolute;
     left: 0;
@@ -54,36 +54,38 @@ const MentorsGrid = styled.div`
 `;
 
 const MentorCard = styled.div<{ $isExpanded: boolean }>`
-  background-color: ${theme.colors.graphite};
+  background-color: ${theme.colors.white};
   padding: ${theme.spacing.md};
   border-radius: 8px;
-  border: 1px solid ${theme.colors.silver};
+  border: 1px solid ${theme.colors.graphite};
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: ${theme.colors.champagne};
+    border-color: ${theme.colors.black};
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(24, 24, 24, 0.1);
   }
 `;
 
 const MentorName = styled.h4`
   font-family: ${theme.fonts.subheading};
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   margin-bottom: ${theme.spacing.xs};
   font-size: 1.25rem;
   text-transform: none;
 `;
 
 const MentorTitle = styled.p`
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   font-size: 0.9rem;
   margin-bottom: ${theme.spacing.sm};
   font-style: italic;
+  opacity: 0.7;
 `;
 
 const MentorDescription = styled.p<{ $isExpanded: boolean }>`
-  color: ${theme.colors.white};
+  color: ${theme.colors.graphite};
   line-height: 1.6;
   max-height: ${props => props.$isExpanded ? '1000px' : '0'};
   overflow: hidden;
@@ -92,18 +94,20 @@ const MentorDescription = styled.p<{ $isExpanded: boolean }>`
 `;
 
 const ExpandIndicator = styled.span`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   font-size: 0.9rem;
   display: block;
   margin-top: ${theme.spacing.xs};
+  font-weight: 600;
 `;
 
 const IntroText = styled.p`
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   text-align: center;
   margin-bottom: ${theme.spacing.lg};
   font-size: 1.125rem;
   font-style: italic;
+  opacity: 0.8;
 `;
 
 interface Mentor {

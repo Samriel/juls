@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { theme } from '../styles/theme';
 
 const BookingContainer = styled.section`
-  background-color: ${theme.colors.graphite};
+  background-color: ${theme.colors.white};
 `;
 
 const BookingContent = styled.div`
@@ -14,16 +14,17 @@ const BookingContent = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   text-align: center;
 `;
 
 const IntroText = styled.p`
   text-align: center;
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   font-size: 1.125rem;
+  opacity: 0.8;
 `;
 
 const Form = styled.form`
@@ -39,55 +40,57 @@ const FormGroup = styled.div`
 `;
 
 const Label = styled.label`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   font-size: 1rem;
   font-weight: 600;
 `;
 
 const Input = styled.input`
   padding: ${theme.spacing.sm};
-  background-color: ${theme.colors.black};
-  border: 1px solid ${theme.colors.silver};
-  color: ${theme.colors.white};
+  background-color: ${theme.colors.champagne};
+  border: 1px solid ${theme.colors.graphite};
+  color: ${theme.colors.graphite};
   font-size: 1rem;
   border-radius: 4px;
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: ${theme.colors.champagne};
+    border-color: ${theme.colors.black};
+    background-color: ${theme.colors.white};
   }
 
   &::placeholder {
-    color: ${theme.colors.silver};
+    color: ${theme.colors.graphite};
     opacity: 0.5;
   }
 `;
 
 const Select = styled.select`
   padding: ${theme.spacing.sm};
-  background-color: ${theme.colors.black};
-  border: 1px solid ${theme.colors.silver};
-  color: ${theme.colors.white};
+  background-color: ${theme.colors.champagne};
+  border: 1px solid ${theme.colors.graphite};
+  color: ${theme.colors.graphite};
   font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: ${theme.colors.champagne};
+    border-color: ${theme.colors.black};
+    background-color: ${theme.colors.white};
   }
 
   option {
-    background-color: ${theme.colors.black};
-    color: ${theme.colors.white};
+    background-color: ${theme.colors.champagne};
+    color: ${theme.colors.graphite};
   }
 `;
 
 const TextArea = styled.textarea`
   padding: ${theme.spacing.sm};
-  background-color: ${theme.colors.black};
-  border: 1px solid ${theme.colors.silver};
-  color: ${theme.colors.white};
+  background-color: ${theme.colors.champagne};
+  border: 1px solid ${theme.colors.graphite};
+  color: ${theme.colors.graphite};
   font-size: 1rem;
   border-radius: 4px;
   min-height: 120px;
@@ -95,11 +98,12 @@ const TextArea = styled.textarea`
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: ${theme.colors.champagne};
+    border-color: ${theme.colors.black};
+    background-color: ${theme.colors.white};
   }
 
   &::placeholder {
-    color: ${theme.colors.silver};
+    color: ${theme.colors.graphite};
     opacity: 0.5;
   }
 `;
@@ -112,47 +116,48 @@ const DatePickerWrapper = styled.div`
   .react-datepicker__input-container input {
     width: 100%;
     padding: ${theme.spacing.sm};
-    background-color: ${theme.colors.black};
-    border: 1px solid ${theme.colors.silver};
-    color: ${theme.colors.white};
+    background-color: ${theme.colors.champagne};
+    border: 1px solid ${theme.colors.graphite};
+    color: ${theme.colors.graphite};
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: ${theme.colors.champagne};
+      border-color: ${theme.colors.black};
+      background-color: ${theme.colors.white};
     }
   }
 
   .react-datepicker {
-    background-color: ${theme.colors.graphite};
-    border: 1px solid ${theme.colors.silver};
+    background-color: ${theme.colors.white};
+    border: 1px solid ${theme.colors.graphite};
     font-family: ${theme.fonts.body};
   }
 
   .react-datepicker__header {
-    background-color: ${theme.colors.black};
-    border-bottom: 1px solid ${theme.colors.silver};
+    background-color: ${theme.colors.champagne};
+    border-bottom: 1px solid ${theme.colors.graphite};
   }
 
   .react-datepicker__current-month,
   .react-datepicker__day-name {
-    color: ${theme.colors.champagne};
+    color: ${theme.colors.black};
   }
 
   .react-datepicker__day {
-    color: ${theme.colors.white};
+    color: ${theme.colors.graphite};
 
     &:hover {
-      background-color: ${theme.colors.champagne};
-      color: ${theme.colors.black};
+      background-color: ${theme.colors.graphite};
+      color: ${theme.colors.white};
     }
   }
 
   .react-datepicker__day--selected {
-    background-color: ${theme.colors.champagne};
-    color: ${theme.colors.black};
+    background-color: ${theme.colors.black};
+    color: ${theme.colors.white};
   }
 `;
 
@@ -169,19 +174,19 @@ const ButtonGroup = styled.div`
 const SubmitButton = styled.button`
   flex: 1;
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background-color: ${theme.colors.champagne};
-  color: ${theme.colors.black};
+  background-color: ${theme.colors.graphite};
+  color: ${theme.colors.white};
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 4px;
+  border: 2px solid ${theme.colors.graphite};
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: transparent;
-    color: ${theme.colors.champagne};
-    border: 2px solid ${theme.colors.champagne};
+    background-color: ${theme.colors.black};
+    border-color: ${theme.colors.black};
     transform: translateY(-2px);
   }
 
@@ -195,12 +200,12 @@ const ContactButton = styled.a`
   flex: 1;
   padding: ${theme.spacing.sm} ${theme.spacing.md};
   background-color: transparent;
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border: 2px solid ${theme.colors.champagne};
+  border: 2px solid ${theme.colors.graphite};
   border-radius: 4px;
   text-align: center;
   transition: all 0.3s ease;
@@ -209,18 +214,18 @@ const ContactButton = styled.a`
   justify-content: center;
 
   &:hover {
-    background-color: ${theme.colors.champagne};
-    color: ${theme.colors.black};
+    background-color: ${theme.colors.graphite};
+    color: ${theme.colors.white};
     transform: translateY(-2px);
   }
 `;
 
 const SuccessMessage = styled.div`
   padding: ${theme.spacing.md};
-  background-color: rgba(247, 231, 206, 0.1);
-  border: 1px solid ${theme.colors.champagne};
+  background-color: rgba(35, 39, 42, 0.1);
+  border: 1px solid ${theme.colors.graphite};
   border-radius: 4px;
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.black};
   text-align: center;
   margin-top: ${theme.spacing.md};
 `;

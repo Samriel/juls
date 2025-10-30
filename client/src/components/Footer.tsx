@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const FooterContainer = styled.footer`
-  background-color: ${theme.colors.graphite};
+  background-color: ${theme.colors.white};
   padding: ${theme.spacing.lg} ${theme.spacing.md};
-  border-top: 1px solid ${theme.colors.silver};
+  border-top: 1px solid ${theme.colors.graphite};
 `;
 
 const FooterContent = styled.div`
@@ -26,27 +26,29 @@ const ContactInfo = styled.div`
 `;
 
 const ContactLink = styled.a`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   font-size: 1rem;
   transition: color 0.3s ease;
+  font-weight: 600;
 
   &:hover {
-    color: ${theme.colors.white};
+    color: ${theme.colors.black};
   }
 `;
 
 const Copyright = styled.p`
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   font-size: 0.9rem;
   text-align: center;
+  opacity: 0.7;
 `;
 
 const Divider = styled.div`
   width: 100%;
   max-width: 600px;
   height: 1px;
-  background-color: ${theme.colors.silver};
-  opacity: 0.3;
+  background-color: ${theme.colors.graphite};
+  opacity: 0.2;
 `;
 
 export const Footer: React.FC = () => {
@@ -59,7 +61,7 @@ export const Footer: React.FC = () => {
           <ContactLink href="mailto:contact@example.com">
             contact@example.com
           </ContactLink>
-          <span style={{ color: theme.colors.silver }}>|</span>
+          <span style={{ color: theme.colors.graphite, opacity: 0.5 }}>|</span>
           <ContactLink href="tel:+70000000000">
             +7 (000) 000-00-00
           </ContactLink>

@@ -4,7 +4,7 @@ import { theme } from '../styles/theme';
 import { Link } from 'react-scroll';
 
 const HeroContainer = styled.section`
-  background: linear-gradient(135deg, ${theme.colors.black} 0%, ${theme.colors.graphite} 100%);
+  background: linear-gradient(135deg, ${theme.colors.white} 0%, ${theme.colors.champagne} 100%);
   position: relative;
   overflow: hidden;
 `;
@@ -29,16 +29,17 @@ const TextContent = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${theme.colors.champagne};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.md};
   line-height: 1.1;
 `;
 
 const Subtitle = styled.p`
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: ${theme.colors.silver};
+  color: ${theme.colors.graphite};
   margin-bottom: ${theme.spacing.lg};
   max-width: 600px;
+  opacity: 0.8;
 
   @media (max-width: ${theme.breakpoints.tablet}) {
     margin: 0 auto ${theme.spacing.lg};
@@ -48,21 +49,21 @@ const Subtitle = styled.p`
 const CTAButton = styled(Link)`
   display: inline-block;
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background-color: ${theme.colors.champagne};
-  color: ${theme.colors.black};
+  background-color: ${theme.colors.graphite};
+  color: ${theme.colors.white};
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid ${theme.colors.champagne};
+  border: 2px solid ${theme.colors.graphite};
 
   &:hover {
-    background-color: transparent;
-    color: ${theme.colors.champagne};
+    background-color: ${theme.colors.black};
+    color: ${theme.colors.white};
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(247, 231, 206, 0.2);
+    box-shadow: 0 10px 30px rgba(24, 24, 24, 0.3);
   }
 `;
 

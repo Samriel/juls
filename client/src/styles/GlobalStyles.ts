@@ -10,12 +10,19 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
     font-family: ${theme.fonts.body};
-    background-color: ${theme.colors.black};
-    color: ${theme.colors.white};
+    background-color: ${theme.colors.champagne};
+    color: ${theme.colors.graphite};
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
