@@ -58,12 +58,12 @@ export const Footer: React.FC = () => {
     <FooterContainer>
       <FooterContent>
         <ContactInfo>
-          <ContactLink href="mailto:contact@example.com">
-            contact@example.com
+          <ContactLink href="mailto:jjulijuli@yandex.ru">
+            jjulijuli@yandex.ru
           </ContactLink>
           <span style={{ color: theme.colors.graphite, opacity: 0.5 }}>|</span>
-          <ContactLink href="tel:+70000000000">
-            +7 (000) 000-00-00
+          <ContactLink href="tel:+79951560007">
+            +7(995)1560007
           </ContactLink>
         </ContactInfo>
         
